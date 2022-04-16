@@ -1,0 +1,61 @@
+A considerar para la PEP 1:
+
+- Comentar el codigo y organizar de forma clara 
+- Formular explicitamente las hipotesis nula y alternativa en lenguaje natural y matematico.
+- Seleccionar adecuadamente la prueba estadistica y mencionar porque es la mas adecuada. Verificar condiciones
+- Concluir adecuadamente ej: "Se falla al rechazar la hipotesis nula debido a que p > alfa mediante <prueba>, por lo que
+  se puede decir que con un 95% de confianza que..."
+
+Existen dos opciones cuando vamos a aplicar una prueba:
+
+1 - Concluir en base a intervalos de confianza
+2 - Concluir en base a prueba de hipotesis
+
+Además debemos siempre comentar que estamos haciendo:
+
+- ¿Que librerias es conveniente utilizar?
+- ¿Que solicitan?
+- Datos
+- ¿Que prueba es mas adecuada?
+- ¿Se cumplen las condiciones?
+- ¿Cuales son las hipotesis? (Lenguaje natural y lenguaje matematico)
+- ¿Cual es el procedimiento?
+- ¿Que podemos concluir?
+
+A modo de resumen es importante mencionar que hasta los contenidos vistos para la primera prueba podemos englobar todo
+en dos grandes bloques:
+
+* Pruebas parametricas: Pruebas para concluir sobre medias y proporciones
+
+- Para medias:
+	- Prueba Z: Se usa cuando la muestra tiene al menos 30 observaciones.
+		    Las observaciones son independientes.
+		    La poblacion sigue una distribucion normal (Grafico q-q)
+	- Prueba t de student: Sirve para cualquier tamaño de muestra.
+		* Una muestra
+		    Las observaciones son independientes.
+		    Las observaciones siguen una distribucion normal (Grafico q-q).
+		* Dos muestras pareadas:
+		    Se usa cuando queremos inferir sobre la diferencia de las medias (Antes-despues, Algoritmo a-Algoritmo b).
+		    Cada muestra cumple las dos condiciones.
+		* Dos muestras independientes:
+		    La inferencia se realiza sobre la diferencia de las medias (Vacuna A-Vacuna B).
+		    Cada muestra cumple las condiciones para usar la distribución t.
+		    Las muestras son independientes entre sí.
+- Para proporciones:
+	- Prueba de Wald: Se deben cumplir dos condiciones.
+		Las observaciones de la muestra son independientes.
+		Se cumple la condicion exito-fracaso: np>=10 y n(1-p) >= 10.
+		
+		* Una proporcion: Estimador p = probabilidad de exito
+		* Dos proporciones diferencia igual a 0: Estimador p = diferencia de medias 
+		* Dos proporciones diferencia distinta de 0: Estimador p = diferencia de medias
+
+
+* Pruebas no parametricas: Pruebas para concluir sobre proporciones
+	- Chi cuadrado: homogeneidad - bondad de ajuste - independencia
+	- Fisher
+	- McNemar 
+	- Q de Cochran 	    
+	
+
