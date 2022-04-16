@@ -58,4 +58,5 @@ en dos grandes bloques:
 	- McNemar 
 	- Q de Cochran 	    
 	
-
+p value y alfa: si p>alfa -> rechazar Ha
+		si p< alfa ->rechazar h0
