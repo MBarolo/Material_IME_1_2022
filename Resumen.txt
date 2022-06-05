@@ -60,3 +60,29 @@ en dos grandes bloques:
 	
 p value y alfa: si p>alfa -> rechazar Ha
 		si p< alfa ->rechazar h0
+==========================================================================================================================================================
+Pep 2: 
+
+ANOVA (Muestras indep. y corr.): Utilizado para comparar medias de más de 2 grupos o muestras (Variable categórica con mas de 2 niveles)
+Debe siempre realizarse un procedimiento Post Hoc al utilizar anovas, por ejemplo con tukey, esto es dado que la prueba anova (omnibus) solo determina si hay diferencia significativa en las medias de dichos grupos, no cuál es este grupo especifico que tiene esta diferencia.
+
+Para cuando se viola la condicion de esfericidad para ANOVA de muestras correlacionadas debe utilizarse el p valor entregado por ezANOVA corregido.
+
+Inferencia no parametrica con medianas: Ofrece alternativas para la prueba t de Student y ANOVA cuando no se cumplen las condiciones de estas.
+	-Prueba de suma de rangos de Wilcoxon: Alternatva a t de Student para muestras independientes
+	-Prueba de rangos con signo de WIlcoxon: Alternativa a t de Student para muestras pareadas
+	
+	-Prueba de Kruskal-Wallis: Alternativa a ANOVA para k>2 muestras independientes, utilizada cuando el tamaño de las muestras difieren. Al igual que con ANOVA 		debe realizarse una prueba post hoc
+	-Prueba de Friedman: Alternativa a ANOVA para k>2 muestras correlacionadas
+	
+Remuestreo (no parametrico): Utilizada cuando se tiene que analizar parametros distintos a la media o varianza o cuando no se cumplen las condiciones de las pruebas ya conocidas.
+	-Bootstrapping: Se utiliza cuando se tiene una muestra pequeña, puede utilizarse para casi cualquier estadistico.
+	-Bootstrapping para dos muestras independientes: Se utiliza cuando se tiene dos muestras independientes de distinto tamaño
+	-Pruebas de permutaciones: 
+		-Simulacion de Monte Carlo: Es utilizada cuando la muestra es muy grande. Alternativa a F de Fisher.
+Transformaciones de datos: 
+	-Tukey: Es utilizada cuando la distribucion de la muestra presenta una asimetria.
+	
+Metodos Robustos:
+	-Prueba de Yuen:alternativa a la prueba t de Student para muestras independientes cuando las varianzas de ambas muestras son muy diferentes o los tamaños de 		las muestras son muy dispares. Para pruebas unilaterales utilizar variante con bootstrapping.
+	-Alternativas a ANOVA: usadas cuando los tamaños muestrales son muy diferentes o no se cumple la condición de homocedasticidad (esfericidad en el caso de grupos correlacionados)
